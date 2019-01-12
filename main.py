@@ -14,7 +14,7 @@ def gameloop(word):
 
     wordLength = int(len(word) - 1)
 
-    print(word)
+    # print(word)
 
     print("Word length:", wordLength)
 

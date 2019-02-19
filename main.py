@@ -26,11 +26,20 @@ def gameloop(word):
             tobetrue = False
 
         else:
+            toprint = ""
+
             for l in word:
                 if l in correct:
-                    print(l, end="")
+                    toprint += l
                 else:
-                    print("_", end="_")
+
+                    if l == word[len(word)-1]:
+                        toprint += " "
+                    else:
+
+                        toprint += "-"
+
+            print(toprint)
 
             print("wrong:", len(wrong), wrong, "  Mstakes remaining:", mistakes)
 
@@ -50,7 +59,7 @@ def gameloop(word):
 
         if mistakes <= 0:
             print("")
-            print("You lost")
+            print("You lost", "the word was:", word)
 
 
 # ----INITIALIZE_WORDLIST---- #
